@@ -11,6 +11,7 @@ namespace vega.Data
     {
         public virtual DbSet<Vehicle> Vehicles { get; set; }
         public virtual DbSet<Make> Makes { get; set; }
+        public virtual DbSet<Model> Models { get; set; }
         public virtual DbSet<Feature> Features { get; set; }
 
         public VegaDbContext(DbContextOptions<VegaDbContext> options)
