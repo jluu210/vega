@@ -26,7 +26,7 @@ export class VehicleFormComponent implements OnInit {
 
     onMakeChange() {
         var selectedMake = this.makes.find(m => m.id == this.vehicle.make);
-        this.models = selectedMake ? selectedMake.models : [];
+        this.models = selectedMake ? selectedMake.models : []; //if the select size is large, change this to a seperate service call
     }
 
 }
