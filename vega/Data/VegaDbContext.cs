@@ -9,6 +9,7 @@ namespace vega.Data
 {
     public class VegaDbContext : DbContext
     {
+        public virtual DbSet<Vehicle> Vehicles { get; set; }
         public virtual DbSet<Make> Makes { get; set; }
         public virtual DbSet<Feature> Features { get; set; }
 

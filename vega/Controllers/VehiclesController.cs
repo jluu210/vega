@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using vega.Controllers.Resources;
+using vega.Data;
 using vega.Models;
 
 namespace vega.Controllers
@@ -13,16 +14,23 @@ namespace vega.Controllers
     public class VehiclesController : Controller
     {
         private readonly IMapper mapper;
+        private readonly VegaDbContext context;
 
-        public VehiclesController(IMapper mapper)
+        public VehiclesController(IMapper mapper, VegaDbContext context)
         {
             this.mapper = mapper;
+            this.context = context;
         }
         [HttpPost]
-        public IActionResult CreateVehiclel([FromBody]VehicleResource vehicleResource)
+        public async Task<IActionResult> CreateVehiclel([FromBody]VehicleResource vehicleResource)
         {
             var vehicle = mapper.Map<VehicleResource, Vehicle>(vehicleResource);
-            return Ok(vehicle);
+            vehicle.LastUpdate = DateTime.Now;
+            context.Vehicles.Add(vehicle);
+            await context.SaveChangesAsync();
+
+            var result = mapper.Map<Vehicle, VehicleResource>(vehicle);
+            return Ok(result);
         }
     }
 }
