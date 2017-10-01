@@ -8,6 +8,7 @@ using vega.Models;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using vega.Controllers.Resources;
+using vega.Core.Models;
 
 namespace vega.Controllers
 {

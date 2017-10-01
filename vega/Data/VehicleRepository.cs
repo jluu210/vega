@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using vega.Core;
 using vega.Models;
 
 namespace vega.Data

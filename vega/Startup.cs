@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.SpaServices.Webpack;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using vega.Data;
+using vega.Core;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 

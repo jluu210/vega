@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using vega.Controllers.Resources;
 using vega.Models;
+using vega.Core.Models;
 
 namespace vega.Mapping
 {

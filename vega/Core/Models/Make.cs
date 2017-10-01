@@ -4,8 +4,9 @@ using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using vega.Models;
 
-namespace vega.Models
+namespace vega.Core.Models
 {
     public class Make
     {
